@@ -9,5 +9,10 @@ Create a simple face detection REST API by using technologies below
  
 ## Clone repository
  ```console
- ww
+ git clone
+ cd 
+```
+## Docker build
+```console
+aaa
 ```
