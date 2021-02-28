@@ -13,6 +13,6 @@ Create a simple face detection REST API by using technologies below
  cd 
 ```
 ## Docker build
-```
+```console
 aaa
 ```
