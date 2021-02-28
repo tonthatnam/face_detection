@@ -1,0 +1,58 @@
+version: "3.5"
+services:
+  waitfordb:
+      image: dadarek/wait-for-dependencies
+      depends_on:
+        - db
+      command: db:5432
+  api:
+    build: ./FaceDetectionAPI
+    command: gunicorn face_detect_api.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - static_volume:/workspace/staticfiles
+      #- ".:/workspace"
+    #ports:
+    #  - "8000:8000"
+    expose:
+      - 8000
+
+    env_file:
+      - ./.env.dev 
+    shm_size: '32gb'
+    #command: tail -f /dev/null
+    depends_on:
+      - db
+      - waitfordb
+    networks:
+      - nginx_network
+      - db_network
+  db:
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - ./.env.db
+    #ports:
+    #  - "5431:5432"
+    networks:
+      - db_network
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/workspace/staticfiles
+    ports:
+      - 8000:80
+    depends_on:
+      - api
+    networks:
+      - nginx_network
+networks:
+  nginx_network:
+    name: nginx_network
+    driver: bridge
+  db_network:
+    name: db_network
+    driver: bridge
+volumes:
+  postgres_data:
+  static_volume:
