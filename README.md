@@ -16,3 +16,6 @@ Create a simple face detection REST API by using technologies below
 ```console
 aaa
 ```
+# Articles and guides that cover face_detection
+
+ * [Build a Production Ready Face Detection API](https://medium.com/devcnairobi/build-a-production-ready-face-detection-api-part-1-c56cbe9592bf) by Urandu Bildad Namawa
