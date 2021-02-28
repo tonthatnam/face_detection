@@ -10,8 +10,11 @@ Create a simple face detection REST API by using technologies below
 ## Clone repository
  ```console
  git clone https://github.com/tonthatnam/face_detection.git
- cd 
+ cd face_detection
 ```
+## Download pretrained model
+ * 
+
 ## Docker build
 ```console
  docker-compose up
