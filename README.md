@@ -9,7 +9,7 @@ Create a simple face detection REST API by using technologies below
  
 ## Clone repository
  ```console
- git clone
+ git clone https://github.com/tonthatnam/face_detection.git
  cd 
 ```
 ## Docker build
