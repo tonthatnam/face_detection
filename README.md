@@ -11,8 +11,8 @@ Create a simple face detection REST API by using technologies below
 ### Contents
 - [Clone repository](#clonerepository)
 - [Download pretrained model](#downloadpretrainedmodel)
-- [Docker build](#docker build)
-- [Run rest](#run rest)
+- [Docker build](#dockerbuild)
+- [Run rest](#runrest)
 - [Result](#result)
 - [References](#references)
 
@@ -39,7 +39,8 @@ Create a simple face detection REST API by using technologies below
 
 ## Result
 
-## Articles and guides that cover face_detection
+## References
+### Articles and guides that cover face_detection
 
  * [Build a Production Ready Face Detection API](https://medium.com/devcnairobi/build-a-production-ready-face-detection-api-part-1-c56cbe9592bf) by Urandu Bildad Namawa
  * [Dockerizing Django with Postgres, Gunicorn, and Nginx](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/#gunicorn) by Michael Herman
