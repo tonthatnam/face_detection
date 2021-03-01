@@ -6,7 +6,7 @@ Create a simple face detection REST API by using technologies below
  * Django
  * Docker
  * PostgreSQL
-
+Use pretrained model of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_Retinaface) to detect faces in picture
 # Local Deploymnet
 ### Contents
 - [Clone repository](#clonerepository)
