@@ -45,7 +45,22 @@ Use pretrained model of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_
 #### Find faces in pictures
 
 #### Get response
-
+```
+{
+    "status": [
+        {
+            "face_id": "3cb138bc-c268-4c46-95b3-9bc58eea3d91",
+            "confidence": 0.9999927282333374,
+            "bouding_box": [
+                593,
+                376,
+                565,
+                714
+            ]
+        }
+    ]
+}
+```
 ## References
 #### Articles and guides that cover face_detection
 
