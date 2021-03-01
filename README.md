@@ -43,6 +43,9 @@ Use pretrained model of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_
 
 ## Result
 #### Find faces in pictures
+##### Input image
+
+##### Output image
 
 #### Get response
 ```
