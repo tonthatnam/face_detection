@@ -9,18 +9,20 @@ Create a simple face detection REST API by using technologies below
 Use pretrained model of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_Retinaface) to detect faces in picture
 # Local Deploymnet
 ### Contents
-- [Clone repository](#clonerepository)
-- [Download pretrained model](#downloadpretrainedmodel)
-- [Docker build](#dockerbuild)
-- [Run rest](#runrest)
+- [Installation](#Installation)
+- [Model](#model)
+- [Build](#build)
+- [Run](#run)
 - [Result](#result)
 - [References](#references)
 
-## Clone repository
+## Installation
+### Clone repository
  ```console
  git clone https://github.com/tonthatnam/face_detection.git
  cd face_detection
 ```
+## Model
 ## Download pretrained model
  * Download pretraind model from Training section of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_Retinaface)
  * Organise the directory of pretrained model as follows:
@@ -30,14 +32,19 @@ Use pretrained model of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_
         mobilenetV1X0.25_pretrain.tar
         Resnet50_Final.pth
 ```
+# Build
 ## Docker build
 ```console
  docker-compose up
 ```
-## Run rest
+## Run
+### Run test on local
  To test REST API, send a post request to the end point http://localhost:8900/api/image/
 
 ## Result
+### Find faces in pictures
+
+### Get response
 
 ## References
 ### Articles and guides that cover face_detection
