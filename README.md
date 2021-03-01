@@ -9,8 +9,8 @@ Create a simple face detection REST API by using technologies below
 
 # Local Deploymnet
 ### Contents
-- [Clone repository](#clone repository)
-- [Download pretrained model](#download pretrained model)
+- [Clone repository](#clonerepository)
+- [Download pretrained model](#downloadpretrainedmodel)
 - [Docker build](#docker build)
 - [Run rest](#run rest)
 - [Result](#result)
