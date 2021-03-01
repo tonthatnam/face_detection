@@ -1,14 +1,21 @@
 ![apm](https://img.shields.io/apm/l/vim-mode.svg) 
 
 Create a simple face detection REST API by using technologies below
- 
+
  * Pytorch
  * Django
  * Docker
  * PostgreSQL
 
 # Local Deploymnet
- 
+### Contents
+- [Clone repository](#clone repository)
+- [Download pretrained model](#download pretrained model)
+- [Docker build](#docker build)
+- [Run rest](#run rest)
+- [Result](#result)
+- [References](#references)
+
 ## Clone repository
  ```console
  git clone https://github.com/tonthatnam/face_detection.git
@@ -29,6 +36,8 @@ Create a simple face detection REST API by using technologies below
 ```
 ## Run rest
  To test REST API, send a post request to the end point http://localhost:8900/api/image/
+
+## Result
 
 ## Articles and guides that cover face_detection
 
