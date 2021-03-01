@@ -16,8 +16,7 @@ Create a simple face detection REST API by using technologies below
  * Download pretraind model from Training section of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_Retinaface)
  * Organise the directory of pretrained model as follows:
 ```
-    ./FaceDetectionAPI/api/
-      models
+    ./FaceDetectionAPI/api/models
 ```
 ## Docker build
 ```console
