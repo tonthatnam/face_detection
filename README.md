@@ -25,7 +25,7 @@ Use pretrained model of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_
 ```
 ## Model
 #### Download pretrained model
- * Download pretraind model from Training section of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_Retinaface)
+ * Download pre-traind model from Training section of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_Retinaface)
  * Organise the directory of pretrained model as follows:
 ```
     ./FaceDetectionAPI/api/retinaface/weights/
