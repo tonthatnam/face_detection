@@ -44,22 +44,52 @@ Use pretrained model of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_
 ## Result
 #### Find faces in pictures
 ##### Input image
-<img src="./tests/test_images/childhood.jpg" width="340" height="340">
+<img src="./tests/test_images/childhood.jpg" width="450" height="340">
 
 ##### Output image
 
 #### Get response
-```
+```console
 {
     "status": [
         {
-            "face_id": "3cb138bc-c268-4c46-95b3-9bc58eea3d91",
-            "confidence": 0.9999927282333374,
+            "face_id": "eae0e45a-20bd-44dc-900f-c990a9f50456",
+            "confidence": 0.9998941421508789,
             "bouding_box": [
-                593,
-                376,
-                565,
-                714
+                451,
+                304,
+                127,
+                163
+            ]
+        },
+        {
+            "face_id": "9ab4c8d0-6125-4310-9700-24a85fde88a2",
+            "confidence": 0.9998594522476196,
+            "bouding_box": [
+                698,
+                305,
+                122,
+                143
+            ]
+        },
+        {
+            "face_id": "1b729c94-e8b3-4e3a-b40a-6b36ac41a08d",
+            "confidence": 0.9998144507408142,
+            "bouding_box": [
+                962,
+                278,
+                128,
+                134
+            ]
+        },
+        {
+            "face_id": "92f2694b-28ae-48e8-91aa-713dd78490b8",
+            "confidence": 0.9994314312934875,
+            "bouding_box": [
+                193,
+                315,
+                142,
+                172
             ]
         }
     ]
