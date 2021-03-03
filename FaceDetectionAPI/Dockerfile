@@ -12,20 +12,11 @@ RUN apt-get update && \
     apt-get install -y libxml2-dev
 
 RUN mkdir -p /workspace
-
 WORKDIR /workspace
-
-# uwsgi
-#RUN pip install uwsgi
 
 COPY ./requirements.txt /workspace
 COPY ./entrypoint.sh /workspace
 COPY . /workspace
 
 RUN pip install -r requirements.txt
-
-RUN pwd
-RUN ls
-
 ENTRYPOINT ["/workspace/entrypoint.sh"]
-#/FaceDetectionAPI/face_detect_api/face_detect_api

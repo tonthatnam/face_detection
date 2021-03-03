@@ -10,12 +10,8 @@ services:
     command: gunicorn face_detect_api.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/workspace/staticfiles
-      #- ".:/workspace"
-    #ports:
-    #  - "8000:8000"
     expose:
       - 8000
-
     env_file:
       - ./.env.dev 
     shm_size: '32gb'
@@ -32,8 +28,6 @@ services:
       - postgres_data:/var/lib/postgresql/data
     env_file:
       - ./.env.db
-    #ports:
-    #  - "5431:5432"
     networks:
       - db_network
   nginx:

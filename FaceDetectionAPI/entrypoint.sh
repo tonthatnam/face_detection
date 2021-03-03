@@ -1,14 +1,5 @@
 #!/bin/bash
-echo "PostgreSQL started"
-pwd
-ls
-#cd /workspace
-pwd
-ls
-#python3 manage.py flush --no-input
-echo "makemigrations"
 python3 manage.py makemigrations
-echo "migrate"
 python3 manage.py migrate --fake--initial
 python3 manage.py migrate
 python3 manage.py collectstatic --no-input
