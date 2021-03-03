@@ -44,6 +44,7 @@ Use pretrained model of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_
 ## Result
 #### Find faces in pictures
 ##### Input image
+<img src="./tests/test_images/childhood.jpg" width="340" height="340">
 
 ##### Output image
 
