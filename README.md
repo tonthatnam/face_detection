@@ -36,12 +36,11 @@ Use pretrained model of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_
 ## Build
 #### Docker build
 ```console
- docker-compose up
+ docker-compose up -d --build
 ```
 ## Run
 #### Run test on local
  To test REST API, send a post request to the end point http://localhost:8900/api/image/
-
 ## Result
 #### Find faces in pictures
 ##### Input image
