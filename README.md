@@ -47,6 +47,7 @@ Use pretrained model of [Pytorch_Retinaface](https://github.com/biubug6/Pytorch_
 <img src="./tests/test_images/childhood.jpg" width="450" height="340">
 
 ##### Output image
+<img src="./tests/result_images/childhood.jpg" width="450" height="340">
 
 #### Get response
 ```console
