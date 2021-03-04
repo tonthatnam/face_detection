@@ -20,7 +20,6 @@ import uuid
 
 import requests
 from django.core.files.storage import default_storage
-#from mtcnn.mtcnn import MTCNN
 from numpy import asarray
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.conf import settings
@@ -33,13 +32,13 @@ def detect_faces_retina(image_id):
     save_folder ='eval/'
     #cpu = False
     cpu = True
-    dataset ='data/FDDB'
     dataset_name = 'FDDB'
     confidence_threshold = 0.8
     top_k = 5000
     nms_threshold = 0.3
     keep_top_k = 750
-
+    # testing scale
+    resize = 1
     if True:
         image_object = Image_object.objects.get(image_id=image_id)
         filename = image_object.name
@@ -47,9 +46,7 @@ def detect_faces_retina(image_id):
         image = image.convert('RGB')
         img = asarray(image)
         img = np.float32(img)
-        print("----------------------------")
-        print(img)
-        ####################################################################
+
         torch.set_grad_enabled(False)
         cfg = None
         if network == "mobile0.25":
@@ -65,21 +62,10 @@ def detect_faces_retina(image_id):
         cudnn.benchmark = False
         device = torch.device("cpu" if cpu else "cuda")
         net = net.to(device)
-
-        # testing scale
-        resize = 1
-
         _t = {'forward_pass': Timer(), 'misc': Timer()}
-
         detected_faces2 = []
-        # testing begin
-        #for i, img_name in enumerate(test_dataset):
         if True:
-            #image_path = "/home/nam/デスクトップ/machine_service/my_ml_service_retinaFace/FaceDetectionAPI/face_detect_api/face_detect_api/" + name
-            #img_raw = cv2.imread(image_path, cv2.IMREAD_COLOR)
-            #img = np.float32(img_raw)
             if resize != 1:
-                #img = cv2.resize(img, None, None, fx=resize, fy=resize, interpolation=cv2.INTER_LINEAR)
                 img = cv2.resize(img, None, None, fx=resize, fy=resize, interpolation=cv2.INTER_LINEAR)
             im_height, im_width, _ = img.shape
             scale = torch.Tensor([img.shape[1], img.shape[0], img.shape[1], img.shape[0]])
@@ -125,15 +111,10 @@ def detect_faces_retina(image_id):
             # do NMS
             dets = np.hstack((boxes, scores[:, np.newaxis])).astype(np.float32, copy=False)
             keep = py_cpu_nms(dets, nms_threshold)
-
             dets = dets[keep, :]
             landms = landms[keep]
-
             dets = np.concatenate((dets, landms), axis=1)
             _t['misc'].toc()
-
-            print("-----------------------test_here_testBegin-----------------------")
-            # save dets
             if dataset_name == "FDDB":
                 #fw.write('{:s}\n'.format(img_name))
                 #fw.write('{:.1f}\n'.format(dets.shape[0]))
@@ -160,7 +141,6 @@ def detect_faces_retina(image_id):
     return detected_faces2
 
 def detect_faces_callback_retina(image_id):
-    #image_id = kwargs.get("image_id")
     image_object = Image_object.objects.get(image_id=image_id)
 
     filename = image_object.name

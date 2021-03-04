@@ -17,7 +17,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-url
-#MEDIA_URL = '/home/nam/デスクトップ/FaceDetectionAPI/face_detect_api/face_detect_api/media/'
 #MEDIA_URL = os.path.join(BASE_DIR, 'FaceDetectionAPI/face_detect_api/face_detect_api/media/')
 
 # Quick-start development settings - unsuitable for production
@@ -31,9 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
