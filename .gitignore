@@ -1,4 +1,5 @@
-FaceDetectionAPI/api/retinaface/data/*
+FaceDetectionAPI/api/retinaface/data/FDDB/*
+FaceDetectionAPI/api/retinaface/data/widerface/*
 FaceDetectionAPI/api/retinaface/results/*
 FaceDetectionAPI/api/retinaface/weights/*
 FaceDetectionAPI/api/views_origin.py
